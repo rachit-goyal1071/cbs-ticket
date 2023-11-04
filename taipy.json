@@ -1,0 +1,12 @@
+{
+    "name": "my-nft-ticket-project",
+    "version": "1.0.0",
+    "description": "A new Taipy project to create NFT tickets with TON",
+    "dependencies": {
+      "taipy": "^0.4.0",
+      "tonsdk": "^1.0.0"
+    },
+    "scripts": {
+      "start": "node server.js"
+    }
+  }
