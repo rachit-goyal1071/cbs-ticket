@@ -1,8 +1,10 @@
-from taipy import route
+from taipy import route, request, component
 from . import NftTicket
 
+
 @route("/mint_nft_ticket", methods=["POST"])
-def mint_nft_ticket():
+@component
+def mint():
     event_name = request.json["event_name"]
     date = request.json["date"]
     number_of_tickets = request.json["number_of_tickets"]
@@ -11,5 +13,6 @@ def mint_nft_ticket():
 
     nft_ticket = NftTicket(event_name, date, number_of_tickets, wallet_address, network_node_url)
     nft_ticket.mint()
-
+    
+    pass
     return {"nft_ticket": nft_ticket}
