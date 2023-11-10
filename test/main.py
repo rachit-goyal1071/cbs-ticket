@@ -10,11 +10,11 @@ import webbrowser
 
 page = """
 <|{title1}|text|class_name=title1-css|format=%.9f|>
-<|navbar|lov={[("page1", "Home"), ("https://en.wikipedia.org/wiki/Nehru_Planetarium", "About Us")]}|>
+<|navbar|lov={[("page1", "Home"), ("https://tourism.gov.in/", "About Us")]}|>
 <br/>
-<|{logo1}|image|label=Kashmir Valley|on_action=image_load|width=430px|height=300px|>
-<|{logo2}|image|label=Udaipur Palace|on_action=image_load|width=430px|height=300px|>
-<|{logo3}|image|label=Himalayas|on_action=image_load|width=430px|height=300px|>
+<|{logo1}|image|label=Kashmir Valley|on_action=image_load|width=430px|height=300px|class_name=image-style|>
+<|{logo2}|image|label=Udaipur Palace|on_action=image_load|width=430px|height=300px|class_name=image-style|>
+<|{logo3}|image|label=Himalayas|on_action=image_load|width=430px|height=300px|class_name=image-style|>
 <br/>
 <|{title2}|text|class_name=title2-css|format=%.9f|>
 <br/>
@@ -34,7 +34,7 @@ Price: <|{tickets_quan}|>
 x 300
 
 <br/>
-<|{submit_b}|Submit|button|class_name=submit-btn|>
+<|Submit|button|class_name=submit-btn|>
 <br/>
 
 """
@@ -52,7 +52,7 @@ def submit_scenario(input_name,location):
         "input_name": input_name,
         "location" :location
     }
-    with open("taipy.json", "w") as f:
+    with open("taipyData.json", "w") as f:
         json.dump(data,f)
 
 

@@ -8,6 +8,11 @@
 
   }
 
+.image-style:hover{
+  transform: translateZ(200px);
+  height: 350px;
+}
+
 .title2-css{
   font-size: 50px;
 }
